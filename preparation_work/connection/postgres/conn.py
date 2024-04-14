@@ -7,9 +7,7 @@ from sqlalchemy.ext.asyncio import (
 from sqlalchemy import text, insert
 from preparation_work.common import Settings
 
-engine_async = create_async_engine(
-    **Settings().postgres
-)
+engine_async = create_async_engine(**Settings().postgres)
 
 async_session_maker = async_sessionmaker(engine_async, expire_on_commit=False)
 
@@ -40,4 +38,3 @@ def async_db_transaction(engine_async=engine_async):
 async def test_db(conn) -> None:
     rez = await conn.execute(text("SELECT 1"))
     print("tr = ", rez.fetchall())  # Print the result of the query
-    

@@ -12,6 +12,7 @@ uvicorn = {extras = ["standard"], version = "^0.29.0"}
 pydantic-settings = "^2.2.1"
 asyncpg = "^0.29.0"
 sqlalchemy = "^2.0.29"
+sha512-crypt = "^0.1.1"
 
 
 [tool.poetry.group.formater.dependencies]

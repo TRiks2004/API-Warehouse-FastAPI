@@ -12,18 +12,15 @@ RIdentification = APIRouter(
 async def identification(
     data: datetime.date = datetime.date.today(),
     interval: datetime.timedelta = datetime.timedelta(
-        days = 1,
-        seconds = 1,
-        microseconds = 1,
-        milliseconds = 1,
-        minutes = 1,
-        hours = 1,
-    )
+        days=1,
+        seconds=1,
+        microseconds=1,
+        milliseconds=1,
+        minutes=1,
+        hours=1,
+    ),
 ):
-    return {
-        "data": data,
-        "interval": interval
-    }
+    return {"data": data, "interval": interval}
 
 
 # Аутентификация
@@ -33,9 +30,6 @@ async def identification(
 #   таких как пароли, биометрические данные (отпечатки пальцев, распознавание лица и т.д.),
 #   смарт-карты, токены и другие технологии. Цель аутентификации - удостовериться,
 #   что пользователь или система являются тем, за кого они себя выдают.
-
-
-
 
 
 # @identification_router.get("/authe", response_model=SGetToken)

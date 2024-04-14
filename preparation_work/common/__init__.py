@@ -1,8 +1,7 @@
 from .settings import FastAPISettings, PostgresSettings
 
-class Settings():
 
-    
+class Settings:
 
     @property
     def fastapi(self) -> dict:
@@ -12,7 +11,6 @@ class Settings():
     def postgres(self) -> dict:
         settings_database = PostgresSettings()
         return {
-            'url': settings_database.db_url_async,
-            'echo': settings_database.db_debug
+            "url": settings_database.db_url_async,
+            "echo": settings_database.db_debug,
         }
-

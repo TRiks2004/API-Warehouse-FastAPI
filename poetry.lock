@@ -975,6 +975,27 @@ files = [
 ]
 
 [[package]]
+name = "sha512-crypt"
+version = "0.1.1"
+description = "Python binding to Rust sha-crypt password hashing crate"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sha512_crypt-0.1.1-cp36-abi3-macosx_10_7_x86_64.whl", hash = "sha256:6fbc200debf7a506243012b5feb088bd643f70e097ea94a6bdf70d9e26ffb6a4"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:971c5f8def6c2034bfbe9626902afc04070f01ffce74a2c2aabf0f59aae97b72"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1488a4f5d777f3501ea4caa4a09271a37d866ab005afdce174f91204cefdf914"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:5a0ce4695e91f63983ec5d0ad21411f6ce507993230636b2a8cd05e5e5edc752"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:e45f7572d023d6d90d7308ecbd88747e341f5a07b0d515e29284aeee8abcf0ce"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d7d0abe88208fb4cdff1cda59eef4c29376a494b8ff80997c0868ff7d8a90e25"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:ffe1b72e0dc30652bcdb33504afb3a20a20892b7b7243e3aac7e00cce6e36588"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4faa2744d122e852532dc613f561d234b5737f3df11224d00042fbb597920149"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5e168eb43a4ac2a07e883cab9c1b339bd0a9467bd0facdef5ddebf5f16c15fae"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-win32.whl", hash = "sha256:ba9084323a240459c395d0e9e2ca9931060a0d07444bd7ab33c5c827b8cf3eaa"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-win_amd64.whl", hash = "sha256:b27f7db343f8527f22518f367aa476107d5123d46389604add7f293b01793037"},
+    {file = "sha512_crypt-0.1.1.tar.gz", hash = "sha256:d7928cb5c850d9c5145d2b788e2c861df04a19c580f87b7ae5afe690e79df9b0"},
+]
+
+[[package]]
 name = "sniffio"
 version = "1.3.1"
 description = "Sniff out which async library your code is running under"
@@ -1414,4 +1435,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "7c180cbec59fb0b7c5bcd549a98f48c6e32ca43bc4317cf27301d746875e28f1"
+content-hash = "8faa9734fbbd722082e5c3d86dc373d2b4a2cb716bd9a9815a1b5d1d12df0edd"
