@@ -62,8 +62,8 @@ class MTOrder(MTBase):
     
     cell: Mapped[int] = mapped_column(ForeignKey(MTCell.id), nullable=False)
     
-    storage_period: Mapped[Interval] = mapped_column(nullable=False)
-    placement_date: Mapped[DateTime] = mapped_column(nullable=False)
+    storage_period: Mapped[Any] = mapped_column(Interval, nullable=False)
+    placement_date: Mapped[Any] = mapped_column(DateTime, nullable=False)
     
     small: Mapped[bool] = mapped_column(nullable=False, default=False)
     
