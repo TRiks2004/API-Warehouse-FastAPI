@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "preparation-work"
+version = "0.1.0"
+description = "API for working with a warehouse for an order point"
+authors = ["triks <trik0001000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.110.1"}
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+pydantic-settings = "^2.2.1"
+asyncpg = "^0.29.0"
+sqlalchemy = "^2.0.29"
+
+
+[tool.poetry.group.formater.dependencies]
+black = "^24.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+psycopg2-binary = "^2.9.9"
+alembic = "^1.13.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

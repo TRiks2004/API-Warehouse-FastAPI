@@ -1,0 +1,56 @@
+version: '3.9'
+
+name: warehouse_service_stack
+
+services:
+  warehouse_datebase:
+    container_name: warehouse_postgres
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Bh3AKrv0k45g1R4SbamW
+      POSTGRES_DB: warehouse
+    restart: always
+    ports:
+      - "8976:5432"
+    volumes:
+      - ./values/database/postgres/data:/var/lib/postgresql/data
+    networks:
+      - warehouse_network
+
+  warehouse_datebase_pgadmin:
+    container_name: warehouse_pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: triks0001000@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 31wDSuz1m4uCUViINqvQ
+    ports:
+      - "8986:80"
+    networks:
+      - warehouse_network
+    depends_on:
+      - warehouse_datebase
+    
+  warehouse_api:
+    build: .
+    container_name: warehouse_fastapi
+    command: 
+      [
+        "python", 
+        "uvicorn_service.py"
+      ]
+    restart: always
+    volumes:
+      - .:/code 
+    ports:
+      - "5674:8000"
+    networks:
+      - warehouse_network
+    depends_on:
+      - warehouse_datebase
+
+networks:
+  warehouse_network:  
+    driver: bridge
+    
